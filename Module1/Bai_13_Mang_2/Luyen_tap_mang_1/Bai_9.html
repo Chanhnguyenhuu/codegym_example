@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let arrayA = [];
+    let arrayB = [];
+    let arrayC = [];
+    let k=0;
+    let soLuongA = parseInt(prompt("Nhập số phần tử của mảng 1"));
+    let soLuongB = parseInt(prompt("Nhập số phần tử của mảng 2"));
+
+    while (soLuongA <= 0 || soLuongB <= 0 || soLuongA !== soLuongB) {
+        soLuongA = parseInt(prompt("Nhập sai, hãy nhập lại số phần tử của mảng 1"));
+        soLuongB = parseInt(prompt("Nhập sai, hãy nhập lại số phần tử của mảng 2"));
+    }
+    for (let i = 0; i < soLuongA; i++) {
+        arrayA[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng thứ 1"));
+    }
+    for (let i = 0; i < soLuongB; i++) {
+        arrayB[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng thứ 2"));
+    }
+
+    for (let i=0;i<soLuongA+soLuongB;i++) {
+        if (i<soLuongA) {
+            arrayC[i] = arrayA[i];
+        }
+        if (i>=soLuongA) {
+            arrayC[i] = arrayB[k];
+            k++;
+        }
+    }
+    console.log(arrayC);
+</script>
+</body>
+</html>

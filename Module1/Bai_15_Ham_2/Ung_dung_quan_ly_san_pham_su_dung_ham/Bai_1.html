@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add New Product</h1>
+<input id="name" type="text">
+<button onclick="add()">Add</button>
+<h1>Display All Product</h1>
+<div id="content"></div>
+
+<script>
+    let productList = ["iphone", "samsung", "nokia", "xiaomi"];
+
+    function displayProduct() {
+        let table = "<table>" +
+            "<tr><th>Product Name</th>" + "<th>Action</th></tr>";
+        for (let i = 0; i < productList.length; i++) {
+            table += "<tr><td>" + productList[i] + "</td>" +
+                '<td><button onclick="edit(' + i + ')">Edit</button></td>' +
+                '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td>'
+                "</tr>";
+        }
+        table = table + "</table>";
+        document.getElementById("content").innerHTML = table;
+    }
+
+    function add() {
+        let name = document.getElementById("name").value;
+        productList.push(name);
+        displayProduct();
+    }
+
+    function edit(index) {
+        productList[index] = prompt("Nhập lại tên muốn chỉnh sửa");
+        displayProduct();
+    }
+
+    function deleteProduct(index) {
+        productList.splice(index,1);
+        displayProduct();
+    }
+    displayProduct();
+</script>
+</body>
+</html>

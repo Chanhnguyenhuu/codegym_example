@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_5</title>
+</head>
+<body>
+<label>Nhập điểm kiểm tra</label>
+<input id="kiemtra" type="number">
+<label>Nhập điểm giữa kì</label>
+<input id="giuaki" type="number">
+<label>Nhập điểm cuối kì</label>
+<input id="cuoiki" type="number">
+<button onclick="kt()">Kiểm tra</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function kt() {
+        let kiemtra = document.getElementById("kiemtra").value;
+        let giuaki = document.getElementById("giuaki").value;
+        let cuoiki = document.getElementById("cuoiki").value;
+        let kq = (parseInt(kiemtra) + parseInt(giuaki)*2 + parseInt(cuoiki)*3)/6;
+        if (kq >= 8){
+            document.getElementById("kq").innerHTML = "Học sinh giỏi";
+        } else if (kq >= 6.5){
+            document.getElementById("kq").innerHTML = "Học sinh khá";
+        } else {
+            document.getElementById("kq").innerHTML = "Học sinh TB yếu";
+        }
+    }
+</script>
+</body>
+</html>

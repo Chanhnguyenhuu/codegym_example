@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //---------------------Bai_1
+
+    let m = parseInt(prompt("Nhập số hàng của ma trận: "));
+    let n = parseInt(prompt("Nhập số cột của ma trận: "));
+    while (m<= 0 || n<=0) {
+        m = parseInt(prompt("Nhập sai, vui lòng nhập lại số hàng của ma trận: "));
+        n = parseInt(prompt("Nhập sai, vui lòng nhập lại số cột của ma trận: "));
+    }
+    let arr = [];
+    let total = 0;
+    for (let i=0;i<m;i++) {
+        arr[i] = [];
+        for (let j=0;j<n;j++) {
+            arr[i][j] = parseInt(prompt("Hãy nhập phần tử vị trí (" + i + ";" + j + ") của mảng" ));
+        }
+    }
+
+    for (let i=0;i<m;i++) {
+        for (let j=0;j<n;j++) {
+            if (parseInt(arr[i][j]) % 2 === 0) {
+                total += arr[i][j];
+            }
+        }
+    }
+
+    console.log(arr);
+    console.log(total);
+
+    //---------------------Bai_2
+
+    // let m = parseInt(prompt("Nhập số hàng của ma trận: "));
+    // let n = parseInt(prompt("Nhập số cột của ma trận: "));
+    // while (m <= 0 || n <= 0) {
+    //     m = parseInt(prompt("Nhập sai, vui lòng nhập lại số hàng của ma trận: "));
+    //     n = parseInt(prompt("Nhập sai, vui lòng nhập lại số cột của ma trận: "));
+    // }
+    // let arr = [];
+    //
+    // for (let i = 0; i < m; i++) {
+    //     arr[i] = [];
+    //     for (let j = 0; j < n; j++) {
+    //         arr[i][j] = parseInt(prompt("Hãy nhập phần tử vị trí (" + i + ";" + j + ") của mảng"));
+    //     }
+    // }
+    //
+    // let count = 0;
+    // for (let i = 0; i < m; i++) {
+    //     for (let j = 0; j < n; j++) {
+    //         if (parseInt(arr[i][j]) == 0 || parseInt(arr[i][j]) == 1) {
+    //             break;
+    //         }
+    //         if (parseInt(arr[i][j]) < 0) {
+    //             break;
+    //         }
+    //         if (parseInt(arr[i][j]) == 2) {
+    //             count++;
+    //         }
+    //         if (parseInt(arr[i][j]) > 2) {
+    //             let check = true;
+    //             for (let k = 2; k < parseInt(arr[i][j]); k++) {
+    //                 if (parseInt(arr[i][j]) % k == 0) {
+    //                     check = false;
+    //                 }
+    //             }
+    //             if (check === true) {
+    //                 count++;
+    //             }
+    //         }
+    //     }
+    // }
+    // console.log(arr);
+    // console.log(count);
+
+    //---------------------Bai_3
+
+    // let m = parseInt(prompt("Nhập số hàng của ma trận: "));
+    // let n = parseInt(prompt("Nhập số cột của ma trận: "));
+    // while (m <= 0 || n <= 0) {
+    //     m = parseInt(prompt("Nhập sai, vui lòng nhập lại số hàng của ma trận: "));
+    //     n = parseInt(prompt("Nhập sai, vui lòng nhập lại số cột của ma trận: "));
+    // }
+    // let arr = [];
+    //
+    // for (let i = 0; i < m; i++) {
+    //     arr[i] = [];
+    //     for (let j = 0; j < n; j++) {
+    //         arr[i][j] = parseInt(prompt("Hãy nhập phần tử vị trí (" + i + ";" + j + ") của mảng"));
+    //     }
+    // }
+    // let max = parseInt(arr[0][0]);
+    // for (let i=1;i<m;i++) {
+    //     for (let j=0;j<n;j++) {
+    //         if (parseInt(arr[i][j]) > max) {
+    //             max = arr[i][j];
+    //         }
+    //     }
+    // }
+    // console.log(arr);
+    // console.log(max);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_2</title>
+</head>
+<body>
+<label>Nhập độ dài (m)</label>
+<input type="number" id="met">
+<button onclick="doi()">Đổi</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function doi() {
+        let met = document.getElementById("met").value;
+        let feet = parseInt(met) * 3.2808;
+        if (met > 0){
+            document.getElementById("kq").innerHTML = feet;
+        } else {
+            document.getElementById("kq").innerHTML = "Độ dài không đúng";
+        }
+    }
+</script>
+</body>
+</html>

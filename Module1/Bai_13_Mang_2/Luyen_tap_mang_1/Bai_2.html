@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let j=0;
+    for (let i = 0; i < 10; i++) {
+        array.push(parseInt(prompt("Nhập phần tử của mảng")));
+    }
+    let max = array[0];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] > max){
+            max = array[i];
+            j=i+1;
+        }
+    }
+    console.log(array);
+    console.log("Giá trị lớn nhất trong mảng là " + max);
+    console.log("Số lớn nhất nằm ở vị trí thứ " + j + " trong mảng");
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập câu hiển thị</label><br>
+<input id="message" type="text"><br>
+<button onclick="alertMessage()">Hiển thị</button>
+<script>
+    function alertMessage(message){
+        let text = document.getElementById("message").value;
+        alert(text);
+    }
+</script>
+</body>
+</html>

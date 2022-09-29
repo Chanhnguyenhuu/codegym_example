@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let array = [];
+    let soLuong = parseInt(prompt("Nhập số phần tử của mảng"));
+    while (soLuong <= 0) {
+        soLuong = parseInt(prompt("Nhập sai, hãy nhập lại"));
+    }
+    for (let i = 0; i < soLuong; i++) {
+        array[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng"));
+    }
+
+    function count(arr) {
+        let n = 0;
+        for (let i = 0; i<arr.length;i++) {
+            if (arr[i]<0) {
+                n++;
+            }
+        }
+        return n;
+    }
+
+    alert("Mảng có " + count(array) + " số nguyên âm");
+
+</script>
+</body>
+</html>

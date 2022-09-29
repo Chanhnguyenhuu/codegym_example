@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_9</title>
+</head>
+<body>
+<label>Nhập cạnh thứ nhất</label>
+<input type="number" id="canh1">
+<label>Nhập cạnh thứ hai</label>
+<input type="number" id="canh2">
+<label>Nhập cạnh thứ ba</label>
+<input type="number" id="canh3">
+<button onclick="kt()">Kiểm tra</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function kt() {
+        let a = document.getElementById("canh1").value;
+        let b = document.getElementById("canh2").value;
+        let c = document.getElementById("canh3").value;
+        if (a>0 && b>0 && c>0){
+            if (parseInt(a)+parseInt(b)>parseInt(c) && parseInt(a)+parseInt(c)>parseInt(b) && parseInt(c)+parseInt(b)>parseInt(a) ){
+                document.getElementById("kq").innerHTML = "Đây là một tam giác";
+            } else {
+                document.getElementById("kq").innerHTML = "Đây không phải là một tam giác";
+            }
+        } else {
+            document.getElementById("kq").innerHTML = "Nhập cạnh không đúng";
+        }
+    }
+</script>
+</body>
+</html>

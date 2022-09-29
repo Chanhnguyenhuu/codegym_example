@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_6</title>
+</head>
+<body>
+<label>Nhập số lượng hàng bán được</label>
+<input type="number" id="sell">
+<label>Nhập đơn giá</label>
+<input type="number" id="gia">
+<button onclick="tinh()">Hoa hồng</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function tinh() {
+        let sell = document.getElementById("sell").value;
+        let gia = document.getElementById("gia").value;
+        let hoahong = parseInt(sell) * parseInt(gia) * 10/100;
+        document.getElementById("kq").innerHTML = hoahong;
+    }
+</script>
+</body>
+</html>

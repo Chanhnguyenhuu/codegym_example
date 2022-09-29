@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Type anthing slowly</h1>
+<textarea rows="10" id="textarea" cols="50" onkeydown="faking()"></textarea>
+<script>
+    let array = ["T", "Ô", "I", " ", "L", "Á", "I", " ", "X", "E", ". "];
+    let text = "";
+    let i = 0;
+    function faking() {
+        text += array[i++];
+        document.getElementById("textarea").value = text;
+        if (i==11) {
+            i = 0;
+        }
+    }
+</script>
+</body>
+</html>

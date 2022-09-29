@@ -1,0 +1,7 @@
+<p>color works!</p>
+
+<select #element (change)="changeColorValue(element.value)">
+  <option *ngFor="let color of colors" [ngValue]="color.id">{{color.name}}</option>
+</select>
+
+<div style="width:500px; height: 500px;" [style.backgroundColor]="code"></div>

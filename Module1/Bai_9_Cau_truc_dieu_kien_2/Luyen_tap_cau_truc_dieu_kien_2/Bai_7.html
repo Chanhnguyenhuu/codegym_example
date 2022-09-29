@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_7</title>
+</head>
+<body>
+<label>Nhập hệ số a</label>
+<input type="number" id="a">
+<label>Nhập hệ số b</label>
+<input type="number" id="b">
+<label>Nhập hệ số c</label>
+<input type="number" id="c">
+<button onclick="tinh()">Tính nghiệm</button>
+<h1 id="kq">Kết quả</h1>
+<h1 id="kq1"></h1>
+<script>
+    function tinh() {
+        let a = document.getElementById("a").value;
+        let b = document.getElementById("b").value;
+        let c = document.getElementById("c").value;
+        let denta = parseInt(b)*parseInt(b) - 4*parseInt(a)*parseInt(c);
+        if (parseInt(denta) < 0){
+            document.getElementById("kq").innerHTML = "Phương trình vô nghiệm";
+        } else if (parseInt(denta) === 0){
+            document.getElementById("kq").innerHTML = "Phương trình có một nghiệm x = " + parseInt(-b)/(2*parseInt(a));
+        } else {
+            document.getElementById("kq").innerHTML = "Phương trình có nghiệm x1 = " + (parseInt(-b) + Math.sqrt(parseInt(denta)))/(2*parseInt(a)) + "<br>" + "Phương trình có nghiệm x2 = " + (parseInt(-b) - Math.sqrt(parseInt(denta)))/(2*parseInt(a));
+        }
+    }
+</script>
+</body>
+</html>

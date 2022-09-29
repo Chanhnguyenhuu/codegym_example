@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+<script>
+    let numbers = prompt("Nhập số lượng số nguyên tố");
+    let count = 1;
+    let N = 2;
+    alert("Số nguyên tố thứ " + count + " là " + N);
+    for (let i = 0; count < numbers; i++) {
+        N++;
+        let check = true;
+        for (let j = 2; j <= Math.sqrt(N); j++) {
+            if (N % j == 0 && N !== 2) {
+                check = false;
+            }
+        }
+        if (check == true) {
+            count++;
+            alert("Số nguyên tố thứ " + count + " là " + N);
+        }
+    }
+</script>
+</body>
+</html>

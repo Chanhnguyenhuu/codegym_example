@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau_3</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Mã sổ</td>
+        <td><input id="maso" type="text"></td>
+    </tr>
+    <tr>
+        <td>Loại tiết kiệm</td>
+        <td><input id="loaitietkiem" type="text"></td>
+    </tr>
+<!--    <tr>-->
+<!--        <td>Họ tên khách hàng</td>-->
+<!--        <td><input id="name" type="text"></td>-->
+<!--    </tr>-->
+    <tr>
+        <td>Chứng minh nhân dân</td>
+        <td><input id="chungminhnhandan" type="number"></td>
+    </tr>
+    <tr>
+        <td>Ngày mở sổ</td>
+        <td><input id="date" type="date"></td>
+    </tr>
+    <tr>
+        <td>Số tiền gửi</td>
+        <td><input id="money" type="number"></td>
+    </tr>
+    <div id="content"></div>
+
+    <button onclick="add()">Xác nhận</button>
+
+</table>
+
+<script>
+
+    let maSo = [];
+    let loaiTietKiem = [];
+    let name = [];
+    let cmnd = [];
+    let date = [];
+    let money = [];
+
+    function soTietKiem() {
+
+        let text = "<table border='1'>" +
+            "<tr><th>Mã sổ</th>" + "<th>Loại tiết kiệm</th>" + "<th>Họ và tên</th>" +
+            "<th>Chứng minh nhân dân</th>" + "<th>Ngày mở sổ</th>" + "<th>Số tiền gửi</th>" + "</tr>";
+        for (let i = 0; i < name.length; i++) {
+            text += "<tr><td>" + maSo[i] + "</td>" + "<td>" + loaiTietKiem[i] + "</td>" + "<td>" + name[i] + "</td>" +
+                "<td>" + cmnd[i] + "</td>" + "<td>" + date[i] + "</td>" + "<td>" + money[i] + "</td>" +
+            "</tr>";
+        }
+        text = text + "</table>";
+        document.getElementById("content").innerHTML = text;
+    }
+
+    soTietKiem();
+
+    function add() {
+        let ma = document.getElementById("maso").value;
+        let tietKiem = document.getElementById("loaitietkiem").value;
+        let ten = document.getElementById("name").value;
+        let chungMinh = document.getElementById("chungminhnhandan").value;
+        let ngay = document.getElementById("date").value;
+        let tien = document.getElementById("money").value;
+
+        maSo.push(ma);
+        loaiTietKiem.push(tietKiem);
+        name.push(ten);
+        cmnd.push(chungMinh);
+        date.push(ngay);
+        money.push(tien);
+        soTietKiem();
+
+    }
+
+
+
+</script>
+</body>
+</html>

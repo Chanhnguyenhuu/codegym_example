@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_10</title>
+</head>
+<body>
+<label>Nhập số điện tiêu thụ</label>
+<input type="number" id="dien">
+<button onclick=" tinh()">Tính tiền</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function tinh() {
+        let dien = document.getElementById("dien").value;
+        let tien;
+        if (dien >= 0){
+            tien = parseInt(dien)*3000;
+            document.getElementById("kq").innerHTML = parseInt(tien);
+        } else {
+            document.getElementById("kq").innerHTML = "Số điện nhập không đúng";
+        }
+    }
+</script>
+</body>
+</html>

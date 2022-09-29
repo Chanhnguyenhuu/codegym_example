@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_12</title>
+</head>
+<body>
+<label>Nhập mức tiền vay</label>
+<input type="number" id="vay"><br>
+<label>Nhập lãi hàng tháng</label>
+<input type="number" id="laithang"><br>
+<label>Nhập số tháng vay</label>
+<input type="number" id="sothangvay"><br>
+<button onclick="tinhlai()">Lãi</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function tinhlai() {
+        let vay = document.getElementById("vay").value;
+        let laithang = document.getElementById("laithang").value;
+        let sothangvay = document.getElementById("sothangvay").value;
+        let lai;
+        if (parseInt(vay)>0 && parseInt(laithang)>0 && parseInt(sothangvay)>0){
+            lai = parseInt(vay)*Math.pow((1+parseInt(laithang)/100),parseInt(sothangvay)) - parseInt(vay);
+            document.getElementById("kq").innerHTML = lai;
+        } else {
+            document.getElementById("kq").innerHTML = "Tiền vay, lãi hoặc tháng vay nhập không đúng";
+        }
+    }
+</script>
+</body>
+</html>

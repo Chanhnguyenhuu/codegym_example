@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_8</title>
+</head>
+<body>
+<label>Nhập tuổi</label>
+<input type="number" id="tuoi">
+<button onclick="kt()">Kiểm tra</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function kt() {
+        let tuoi = document.getElementById("tuoi").value;
+            if (parseInt(tuoi) > 0 && parseInt(tuoi) < 120) {
+                document.getElementById("kq").innerHTML = "Đây là tuổi của một người";
+            } else {
+                document.getElementById("kq").innerHTML = "Đây không phải là tuổi của một người";
+            }
+        }
+</script>
+</body>
+</html>

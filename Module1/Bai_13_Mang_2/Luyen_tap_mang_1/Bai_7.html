@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let array = [];
+    let soLuong = parseInt(prompt("Nhập số phần tử của mảng"));
+    while (soLuong <= 0) {
+        soLuong = parseInt(prompt("Nhập sai, hãy nhập lại"));
+    }
+    for (let i = 0; i < soLuong; i++) {
+        array[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng"));
+    }
+
+    let v = parseInt(prompt("Nhập một số nguyên bất kì"));
+    let check = true;
+    for (let i=0;i<array.length;i++) {
+        if (array[i] == v) {
+            array.splice(i,1);
+            array.push(0);
+            check = true;
+            break;
+        } else {
+            check = false;
+        }
+    }
+
+
+    if (check == true) {
+        alert(v + " is in the array");
+        alert("New array is " + array);
+    } else {
+        alert(v + " is not in the array");
+    }
+
+</script>
+</body>
+</html>

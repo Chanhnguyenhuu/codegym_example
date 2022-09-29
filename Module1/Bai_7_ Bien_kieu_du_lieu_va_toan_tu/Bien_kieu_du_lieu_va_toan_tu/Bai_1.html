@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+<label>Nhập điểm Lý</label>
+<input type="number" id="ly">
+<label>Nhập điểm Hoá</label>
+<input type="number" id="hoa">
+<label>Nhập điểm Sinh</label>
+<input type="number" id="sinh">
+<button onclick="point()">Kết quả</button>
+<h1 id="rs">kq</h1>
+<script>
+    function point() {
+        let ly = document.getElementById("ly").value;
+        let hoa = document.getElementById("hoa").value;
+        let sinh = document.getElementById("sinh").value;
+        let tb = (parseInt(ly)+parseInt(hoa)+parseInt(sinh))/3;
+        document.getElementById("rs").innerHTML = tb;
+
+    }
+
+</script>
+</body>
+</html>

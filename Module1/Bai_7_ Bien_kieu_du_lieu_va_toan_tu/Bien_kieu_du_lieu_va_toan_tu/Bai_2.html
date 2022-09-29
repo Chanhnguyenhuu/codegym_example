@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_2</title>
+</head>
+<body>
+    <label>Nhập Độ C</label>
+    <input type="number" id="temple">
+    <button onclick="Doi()">Đổi</button>
+    <h1 id="DoF">Độ F</h1>
+<script>
+    function Doi() {
+        let C = document.getElementById("temple").value;
+        let F = 9*C/5 + 32;
+        document.getElementById("DoF").innerHTML = F;
+    }
+
+</script>
+</body>
+</html>

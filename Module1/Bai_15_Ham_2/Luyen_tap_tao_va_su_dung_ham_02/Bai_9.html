@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [];
+    let n = prompt("Hãy nhập số phần tử của mảng: ");
+    while (n <= 0) {
+        n = prompt("Nhập sai, xin hãy nhập lại số phần tử của mảng: ");
+    }
+    for (let i = 0; i < n; i++) {
+        let a =i+1;
+        array[i] = prompt("Nhập phần tử thứ " + a + " của mảng");
+    }
+    let x = prompt("Nhập vào một kí tự để kiểm tra");
+
+    function check(kitu) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (kitu == array[i]) {
+                count = count + 1;
+            }
+        }
+        if(count == 0) {
+            count = -1;
+        }
+        return count;
+    }
+    alert("Số lần xuất hiện của " + x + " là: " + check(x));
+</script>
+</body>
+</html>

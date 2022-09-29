@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="tamgiac1()">Tam giác 1</button>
+<button onclick="tamgiac2()">Tam giác 2</button>
+<button onclick="tamgiac3()">Tam giác 3</button>
+<button onclick="tamgiac4()">Tam giác 4</button>
+<script>
+    function tamgiac1() {
+        let i = 0;
+        let j = 0;
+        for (i; i < 5; i++) {
+            for (j = 0; j <= i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+    function tamgiac2() {
+        let i = 5;
+        let j = 0;
+        for (i; i <= 5 && i > 0; i = i - 1) {
+            for (j = 0; j < i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+
+    function tamgiac3() {
+        let i = 0;
+        let j = 0;
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j <= 5; j++) {
+                if (j >= 5 - i) {
+                    document.write("*");
+                }
+                if (j < 5 - i) {
+                    document.write("&nbsp&nbsp");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+
+    function tamgiac4() {
+        let i = 0;
+        let j = 0;
+        for (i = 0; i < 5; i++) {
+            for (j = 0; j < 5; j++) {
+                if (i > j ) {
+                    document.write("&nbsp&nbsp");
+                }
+                if (i <= j) {
+                    document.write("*");
+                }
+            }
+            document.write("<br>");
+        }
+    }
+</script>
+</body>
+</html>

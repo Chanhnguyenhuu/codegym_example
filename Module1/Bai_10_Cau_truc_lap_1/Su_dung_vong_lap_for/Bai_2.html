@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_2</title>
+</head>
+<body>
+<label>Nhập một số bất kì</label>
+<input type="number" id="num">
+<button onclick="tong()">Tính tổng</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+  function tong() {
+    let i;
+    let n = document.getElementById("num").value;
+    let tong = 0;
+    if (n>0){
+      for (i=1 ; i <= n ; i+=1){
+        tong = parseInt(tong) +i;
+      }
+      document.getElementById("kq").innerHTML = tong;
+    } else {
+      document.getElementById("kq").innerHTML = "Số nhập không đúng";
+    }
+  }
+</script>
+</body>
+</html>

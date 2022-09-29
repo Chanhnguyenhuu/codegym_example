@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daonguoc(array) {
+        let n = array.length;
+        for (let i = 0; i < n; i++) {
+            let a = array[i];
+            array[i] = array[n - 1];
+            array[n - 1] = a;
+            n = n - 1;
+        }
+        return array;
+    }
+    let array = [];
+    let soLuong = parseInt(prompt("Nhập số phần tử của mảng"));
+    while (soLuong <= 0) {
+        soLuong = parseInt(prompt("Nhập sai, hãy nhập lại"));
+    }
+    for (let i = 0; i < soLuong; i++) {
+        array[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng"));
+    }
+    alert("Mảng trước khi đảo ngược là: " + array);
+    alert("Mảng đảo ngược là: " + daonguoc(array));
+</script>
+</body>
+</html>

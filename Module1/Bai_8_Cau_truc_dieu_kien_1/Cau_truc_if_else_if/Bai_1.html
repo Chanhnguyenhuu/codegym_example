@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+<label>Tên đăng nhập</label>
+<input type="text" id="ten"><br>
+<label>Mật khẩu</label>
+<input type="password" id="matkhau">
+<button onclick="dangnhap()">Đăng nhập</button>
+<script>
+    function dangnhap() {
+        let ten = document.getElementById("ten").value;
+        let matkhau = document.getElementById("matkhau").value;
+        if (ten === "Admin"){
+            alert("Hãy nhập mật khẩu");
+            if (matkhau === "TheMaster"){
+                alert("Welcome");
+            } else if (matkhau === null){
+                alert("Canceled");
+            } else {
+                alert("Wrong password")
+            }
+        } else if (ten === null){
+            alert("Canceled");
+        } else {
+            alert("I don't know you")
+        }
+    }
+</script>
+</body>
+</html>

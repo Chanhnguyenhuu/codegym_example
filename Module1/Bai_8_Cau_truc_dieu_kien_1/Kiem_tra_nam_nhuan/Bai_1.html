@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bai_1</title>
+</head>
+<body>
+<label>Nhập năm</label>
+<input type="number" id="year">
+<button onclick="tinh()">Kiểm tra</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+  function tinh() {
+    let year = document.getElementById("year").value;
+    let du1 = parseInt(year) % 4;
+    let du2 = parseInt(year) % 100;
+    let du3 = parseInt(year) % 400;
+    let kq;
+    if (du1 === 0 && du2 !== 0){
+      document.getElementById("kq").innerHTML = year + " Là năm nhuận";
+    } else if (du2 === 0 && du3 !== 0){
+      document.getElementById("kq").innerHTML = year + " Không phải năm nhuận";
+    } else if (du2 === 0 && du3 === 0){
+      document.getElementById("kq").innerHTML = year + " Là năm nhuận";
+    } else {
+      document.getElementById("kq").innerHTML = year + " Không phải năm nhuận";
+    }
+  }
+</script>
+</body>
+</html>

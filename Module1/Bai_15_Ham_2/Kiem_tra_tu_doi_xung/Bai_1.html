@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(word) {
+        let array = word.split("");
+        let n = array.length;
+        let result = true;
+        for (i = 0; i < n/2; i++) {
+            if (array[i] !== array[n - 1 - i]) {
+                result = false;
+                break;
+            } else {
+                result = true;
+            }
+        }
+        return result;
+    }
+    let str = prompt("Nhập vào một từ bất kì:");
+    alert(check(str));
+</script>
+</body>
+</html>

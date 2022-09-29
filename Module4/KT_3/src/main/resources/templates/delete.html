@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Question</title>
+</head>
+<body>
+<form action="/delete" method="post" th:object="${questionContent}">
+    <div class="container col-4">
+        <div class="row text-center mb-5">
+            <h1>Edit Question</h1>
+        </div>
+        <div class="row col-3">
+            <a button class="btn btn-primary" href="/">Back to list</a>
+        </div>
+        <div class="row">
+            <table class="table">
+                <tr>
+                    <td>Id</td>
+                    <td>
+                        <input class="input" type="text" th:field="*{id}">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-1">Title</td>
+                    <td class="col-2">
+                        <input class="input" type="text" th:field="*{title}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Content</td>
+                    <td>
+                        <input class="input" type="text" th:field="*{content}">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Answer</td>
+                    <td>
+                        <input class="input" type="text" th:field="*{answer}">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Date Create</td>
+                    <td>
+                        <input class="input" type="text" th:field="*{dateCreate}">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>
+                        <input class="input" type="text" th:field="*{status}">
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>Question Type</td>
+                    <td>
+                        <select th:field="*{questionType}">
+                            <option th:each="item: ${questionTypeList}" th:value="${item.id}"
+                                    th:text="${item.name}"></option>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary" type="submit">Delete</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>
+</body>
+</html>

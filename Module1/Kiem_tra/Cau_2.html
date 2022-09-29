@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cau_2</title>
+</head>
+<body>
+<script>
+
+    let numA = parseInt(prompt("Nhập tử của phân số thứ nhất"));
+    let numB = parseInt(prompt("Nhập mẫu của phân số thứ nhất"));
+    let numC = parseInt(prompt("Nhập tử của phân số thứ hai"));
+    let numD = parseInt(prompt("Nhập mẫu của phân số thứ hai"));
+    let result = "";
+
+    function check(numA, numB, numC, numD) {
+        if (numA * numD == numB * numC) {
+            result += "Hai phân số bằng nhau";
+        } else {
+            result += "Hai phân số không bằng nhau";
+        }
+        return result;
+    }
+
+    console.log("Phân số thứ nhất là: " + numA + "/" + numB);
+    console.log("Phân số thứ hai là: " + numC + "/" + numD);
+    console.log(check(numA, numB, numC, numD));
+
+</script>
+</body>
+</html>

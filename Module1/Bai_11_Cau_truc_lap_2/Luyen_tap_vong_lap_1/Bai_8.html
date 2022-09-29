@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+<script>
+    function play() {
+        let k=1;
+        let i = prompt("Nhập khoảng muốn đoán");
+        let j = Math.floor(Math.random()*i)+1;
+        let n = prompt("Nhập số muốn đoán");
+        for (k=1;k<4 && n!==j;k++){
+            if (n<j) {
+                alert("Số " + n + " bé hơn số được chọn");
+                n = prompt("Nhập số muốn đoán");
+            } else if (n>j){
+                alert("Số " + n + " lớn hơn số được chọn");
+                n = prompt("Nhập số muốn đoán");
+            }
+        }
+        alert("Xin chúc mừng");
+    }
+</script>
+</body>
+</html>

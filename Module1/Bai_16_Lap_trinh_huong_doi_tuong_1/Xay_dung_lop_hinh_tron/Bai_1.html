@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Circle {
+        constructor(radius, color) {
+            this.radius = radius;
+            this.color = color;
+        }
+
+        getRadius() {
+            return this.radius;
+        }
+
+        getArea() {
+            return this.radius * this.radius * Math.PI;
+        }
+    }
+
+    let cir = new Circle(2);
+    let radius = cir.getRadius();
+    let area = cir.getArea();
+    console.log("Bán kính = " + radius + ", Diện tích = " + area);
+</script>
+</body>
+</html>

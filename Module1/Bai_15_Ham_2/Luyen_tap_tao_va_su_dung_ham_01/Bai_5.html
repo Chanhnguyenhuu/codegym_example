@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function check(array) {
+        let nameStar = true;
+        for (let i = 0; i < array1.length; i++) {
+            if (array1[i] == array) {
+                alert("Ngôi sao " + array1[i] + " nằm trong chòm sao " + array2[i]);
+                nameStar = false;
+                break;
+            }
+        }
+        if (nameStar == true) {
+            alert("Nhập tên ngôi sao không đúng");
+        }
+    }
+
+    let star = prompt("Nhập vào tên ngôi sao: ");
+    check(star);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_4</title>
+</head>
+<body>
+<label>Nhập chiều dài</label>
+<input type="number" id="dai">
+<label>Nhập chiều rộng</label>
+<input type="number" id="rong">
+<button onclick="tinh()">Tính diện tích</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function tinh() {
+        let dai = document.getElementById("dai").value;
+        let rong = document.getElementById("rong").value;
+        let dientich;
+        if (parseInt(dai) > 0 && parseInt(rong) > 0){
+            dientich = parseInt(dai) * parseInt(rong);
+            document.getElementById("kq").innerHTML = dientich;
+        } else {
+            document.getElementById("kq").innerHTML = "Độ dài nhập không đúng";
+        }
+    }
+</script>
+</body>
+</html>

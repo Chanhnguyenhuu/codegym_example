@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let array = [];
+    let soLuong = parseInt(prompt("Nhập số phần tử của mảng"));
+    while (soLuong <= 0) {
+        soLuong = parseInt(prompt("Nhập sai, hãy nhập lại"));
+    }
+    for (let i = 0; i < soLuong; i++) {
+        array[i] = parseInt(prompt("Nhập phần tử thứ " + i + " của mảng"));
+    }
+
+    for (let i=0;i<array.length;i++) {
+        for (let j=i+1;j<array.length;j++) {
+            let a = array[i];
+            if (array[i]>array[j]) {
+                array[i] = array[j];
+                array[j] = a;
+            }
+        }
+    }
+    alert("Mảng sau khi sắp xếp tăng dần là: " + array);
+
+</script>
+</body>
+</html>

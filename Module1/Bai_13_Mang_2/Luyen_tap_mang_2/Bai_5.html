@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let str1 = prompt("Nhập chuỗi thứ nhất");
+    let str2 = prompt("Nhập chuỗi thứ hai");
+    let array1 = str1.split('');
+    let array2 = str2.split('');
+    let check = true;
+
+    if (array1.length !== array2.length) {
+        check = false;
+    }
+    if (array1.length==array2.length) {
+        for (let i=0;i<array1.length;i++) {
+            if (array1[i] == array2[i]) {
+                check = true;
+            } else {
+                check = false;
+                break;
+            }
+        }
+    }
+    if (check == true) {
+        alert("Hai chuỗi giống nhau");
+    } else {
+        alert("Hai chuỗi khác nhau");
+    }
+
+
+</script>
+</body>
+</html>

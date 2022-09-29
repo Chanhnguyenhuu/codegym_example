@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rectangular {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+
+        getDienTich() {
+            return this.dai * this.rong;
+        }
+
+        getChuVi() {
+            return (this.dai + this.rong) * 2;
+        }
+
+        setDai(dai) {
+            this.dai = dai;
+        }
+
+        setRong(rong) {
+            this.rong = rong;
+        }
+    }
+
+    let Rectangle = new Rectangular(3, 5);
+    alert("Diện tích là: " + Rectangle.getDienTich());
+    alert("Chu vi là: " + Rectangle.getChuVi());
+
+    Rectangle.setDai(4);
+    Rectangle.setRong(6);
+    alert("Diện tích là: " + Rectangle.getDienTich());
+    alert("Chu vi là: " + Rectangle.getChuVi());
+
+</script>
+</body>
+</html>

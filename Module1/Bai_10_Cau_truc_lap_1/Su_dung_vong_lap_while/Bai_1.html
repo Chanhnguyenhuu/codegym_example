@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhập số bất kì");
+    let tong = 0;
+    if (Number.isFinite(parseInt(num))){
+        document.write(num);
+        document.write("<br>");
+        tong = tong + parseInt(num);
+        while (parseInt(num) !== -1){
+            num = prompt("Nhập số bất kì");
+            if (Number.isFinite(parseInt(num))){
+                document.write(num);
+                document.write("<br>");
+                tong = parseInt(tong) + parseInt(num);
+            } else {
+                alert("Đây không phải là số");
+            }
+        }
+        document.write("Tổng = " + tong);
+    } else {
+        alert("Đây không phải là số");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai_1</title>
+</head>
+<body>
+<label>What is the “official” name of JavaScript?</label>
+<input id="chuoi" type="text">
+<button onclick="kt()">Kiểm tra</button>
+<h1 id="kq">Kết quả</h1>
+<script>
+    function kt() {
+        let chuoi = document.getElementById("chuoi").value;
+        if (chuoi === "ECMAScript"){
+            document.getElementById("kq").innerHTML = "Right!";
+        } else {
+            document.getElementById("kq").innerHTML = "Didn’t know? ECMAScript!";
+        }
+    }
+</script>
+</body>
+</html>

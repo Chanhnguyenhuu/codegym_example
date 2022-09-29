@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function minArray(arr) {
+        let min = arr[0];
+        let i = 0;
+        let n = 0;
+        if (arr.length < 1) {
+            return -1;
+        }
+        for (i = 0; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+                n = i;
+            }
+        }
+        return n;
+    }
+
+    let arr1 = [3, 5, 1, 8, -3, 7, 8];
+    let viTri1 = minArray(arr1);
+    alert("Vị trí của GTNN trong mảng 1 là: " + viTri1);
+
+    let arr2 = [7, 12, 6, 9, 20, 56, 89];
+    let viTri2 = minArray(arr2);
+    alert("Vị trí của GTNN trong mảng 2 là: " + viTri2);
+
+    let arr3 = [];
+    let viTri3 = minArray(arr3);
+    alert("Vị trí của GTNN trong mảng 3 là: " + viTri3);
+
+    let arr4 = [0, 0, 0, 0, 0, 0];
+    let viTri4 = minArray(arr4);
+    alert("Vị trí của GTNN trong mảng 4 là: " + viTri4);
+
+</script>
+</body>
+</html>
