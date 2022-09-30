@@ -1,1 +1,6 @@
-<h2>Rating Bar</h2>
+<span *ngFor="let rating of ratings">
+  <button (click)="vote(rating)" *ngIf="rating.active; else inactive" style="background: red">{{rating.value}}</button>
+  <ng-template #inactive>
+    <button (click)="vote(rating)">{{rating.value}}</button>
+  </ng-template>
+</span>
