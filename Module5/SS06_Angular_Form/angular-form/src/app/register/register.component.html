@@ -1,41 +1,61 @@
-<div class="form-group">
+<div class="container form-group text-left col-10">
   <div>
     <h1>Create new Register</h1>
   </div>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label>Email:</label>
-      <input type="text" class="form-group" formControlName="email">
-      <span *ngIf="registerForm.controls.email.dirty
+    <div class="form-group mb-1">
+      <label class="col-2">Email:</label>
+      <input type="text" class="form-group col-2" formControlName="email">
+      <span class="col-2" *ngIf="registerForm.controls.email.invalid
             && registerForm.controls.email?.invalid" style="color: red">Không được để trống</span>
     </div>
-    <div class="form-group">
-      <label>Password:</label>
-      <input type="text" class="form-group" formControlName="password">
+    <div class="form-group mb-1">
+      <label class="col-2">Password:</label>
+      <input type="text" name="password" class="form-group col-2" formControlName="password">
+      <span class="col-2" *ngIf="registerForm.controls.password.invalid
+            && registerForm.controls.password?.invalid" style="color: red">Độ dài lớn hơn 6</span>
     </div>
-    <div class="form-group">
-      <label>Confirm Password:</label>
-      <input type="text" class="form-group" formControlName="confirmPassword">
+    <div class="form-group mb-1">
+      <label class="col-2">Confirm Password:</label>
+      <input type="text" name="confirmPassword" class="form-group col-2" (change)="check(registerForm.controls.confirmPassword.value, registerForm.controls.password.value)" formControlName="confirmPassword">
+      <span class="col-2" *ngIf="registerForm.controls.confirmPassword.invalid
+            && registerForm.controls.confirmPassword?.invalid" style="color: red">Không được để trống</span>
     </div>
-    <div class="form-group">
-      <label>Country:</label>
-      <input type="text" class="form-group" formControlName="country">
+    <div class="form-group mb-1">
+      <label class="col-2">Country:</label>
+      <select class="form-group col-2" formControlName="country">
+        <option></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <span class="col-2" *ngIf="registerForm.controls.country.invalid
+            && registerForm.controls.country?.invalid" style="color: red">Không được để trống</span>
     </div>
-    <div class="form-group">
-      <label>Age:</label>
-      <input type="text" class="form-group" formControlName="age">
+    <div class="form-group mb-1">
+      <label class="col-2">Age:</label>
+      <input type="number" class="form-group col-2" formControlName="age">
+      <span class="col-2" *ngIf="registerForm.controls.age.invalid
+            && registerForm.controls.age?.invalid" style="color: red">Tuổi lớn hơn hoặc bằng 18</span>
     </div>
-    <div class="form-group">
-      <label>Gender:</label>
-      <input type="text" class="form-group" formControlName="gender">
+    <div class="form-group mb-1">
+      <label class="col-2">Gender:</label>
+      <input type="radio" class="form-group" formControlName="gender" value="0"> Male
+      <input type="radio" class="form-group" formControlName="gender" value="1"> Female
+      <input type="radio" class="form-group" formControlName="gender" value="2"> LGBT
+      <span class="col-2" *ngIf="registerForm.controls.gender.invalid
+            && registerForm.controls.gender?.invalid" style="color: red">Không được để trống</span>
     </div>
-    <div class="form-group">
-      <label>Phone:</label>
-      <input type="text" class="form-group" formControlName="phone">
+    <div class="form-group mb-1">
+      <label class="col-2">Phone:</label>
+      <input type="text" class="form-group col-2" formControlName="phone">
+      <span class="col-2" *ngIf="registerForm.controls.phone.invalid
+            && registerForm.controls.phone?.invalid" style="color: red">Độ dài 9 đến 10 số</span>
     </div>
-    <div class="form-group">
-      <label></label>
-      <button type="submit" class="btn btn-primary">Create</button>
+    <div class="form-group mb-1">
+      <label class="col-2"></label>
+      <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Create</button>
     </div>
   </form>
 </div>
